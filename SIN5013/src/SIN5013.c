@@ -11,20 +11,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int soma(int, int);
-
 
 int main(void) {
-//	printf("Realizando teste C: %d ", soma(5,4));
-//
-//	teste02();
-
-//	teste03();
-//	mallocTest();
-	teste02B();
+	imprimirLista();
 	return EXIT_SUCCESS;
 }
 
-int soma(int a, int b){
-	return a+b;
-}
+
