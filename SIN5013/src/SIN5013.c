@@ -11,9 +11,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lista/lista.h"
+#include "lista/ListaSequencial.h"
 
-int main() {
+
+int main(void) {
 	mainListaSequencial();
 
-	return 0;
+	return EXIT_SUCCESS;
 }
