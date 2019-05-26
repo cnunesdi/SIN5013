@@ -10,11 +10,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "lista/lista.h"
 
+int main() {
+	mainListaSquencial();
 
-int main(void) {
-	imprimirLista();
-	return EXIT_SUCCESS;
+	return 0;
 }
-
-
