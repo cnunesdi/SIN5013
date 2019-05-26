@@ -13,7 +13,7 @@
 #include "lista/lista.h"
 
 int main() {
-	mainListaSquencial();
+	mainListaSequencial();
 
 	return 0;
 }

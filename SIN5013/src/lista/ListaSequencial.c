@@ -109,7 +109,7 @@ int buscaSentinela(LISTA* l, TIPOCHAVE ch) {
 
 
 
-void mainListaSquencial(){
+void mainListaSequencial(){
   LISTA lista;
   inicializarLista(&lista);
   exibirLista(&lista);
