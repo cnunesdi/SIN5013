@@ -4,7 +4,24 @@
   de filhos. Esta estrutura usa uma lista ligada de filhos.
 ******************************************************************************/
 #include <stdio.h>
-#include "enaria.h"
+
+	#define true 1
+	#define false 0
+
+	typedef int bool;
+	typedef int TIPOCHAVE;
+
+	typedef struct {
+	  TIPOCHAVE chave;
+	  void * filhos;
+	} NO;
+
+	typedef NO* PONT;
+
+	typedef struct auxF {
+	  PONT no;
+	  struct auxF * prox;
+	}FILHOS;
 
 /* retorna o endereco do NO que contem chave=ch ou NULL caso a chave nao seja
    encontrada.                                                                */
@@ -60,7 +77,7 @@ PONT criarRaiz(TIPOCHAVE novaChave){
     return criarNovoNo(novaChave);
 }
 
-void mainArvoreEnaria(){
+void mainArvoreEnaria1(){
   PONT raiz = criarRaiz('a');
 
   inserirFilho(raiz,'b','a');

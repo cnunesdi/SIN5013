@@ -10,12 +10,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "lista/lista.h"
-#include "lista/ListaSequencial.h"
+#include "arvore/binaria/arvoreBinaria.h"
 
 
 int main(void) {
-	mainListaSequencial();
+	mainArvoreBinaria();
 
 	return EXIT_SUCCESS;
 }
