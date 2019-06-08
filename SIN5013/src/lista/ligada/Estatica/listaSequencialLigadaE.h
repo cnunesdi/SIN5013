@@ -36,8 +36,8 @@ typedef struct{
  */
 void inicializarLista(LISTA *l){
 	int i;
-	l->inicio = 0;
-	l->dispo = NUL;
+	l->inicio = NUL;
+	l->dispo = 0;
 	for(i=0; i<MAX-1;i++)
 		l->A[i].prox = i + 1;
 
