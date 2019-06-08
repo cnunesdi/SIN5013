@@ -10,11 +10,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "arvore/binaria/arvoreBinaria.h"
 
+#include "lista/ligada/Estatica/usaListaLigadaInterativo.h"
 
 int main(void) {
-	mainArvoreBinaria();
-
+	mainListaLigadaE();
 	return EXIT_SUCCESS;
 }
