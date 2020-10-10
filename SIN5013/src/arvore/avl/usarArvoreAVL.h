@@ -5,8 +5,8 @@
  *      Author: cnunesdi
  */
 
-#ifndef ARVORE_AVL_USARARVOREAVL_H_
-#define ARVORE_AVL_USARARVOREAVL_H_
+#ifndef ARVORE_AVL_USARARVOREAVL_C_
+#define ARVORE_AVL_USARARVOREAVL_C_
 
 
 /******************************************************************************
@@ -14,7 +14,8 @@
 // Este programa interage com o usuario para o gerenciamento de arvores AVL.
 ******************************************************************************/
 #include <stdio.h>
-#include "arvoreAVL.h"
+
+#include "arvoreAVL.c"
 
 void verificaEhAVL(PONT l){
      int alt = 0;
@@ -45,7 +46,7 @@ void buscar(NO *l){
   TIPOCHAVE01 ch;
   scanf("%i",&ch);
   PONT posicao = buscaBinaria(ch,l);
-  if (posicao != NUL) printf("Elemento %i encontrado no endereco %p.\n",ch,posicao);
+  if (posicao != NULL) printf("Elemento %i encontrado no endereco %p.\n",ch,posicao);
   else printf("Nao foi possivel encontrar elemento %i.\n",ch);
 }
 
@@ -138,4 +139,4 @@ void mainArvoreAVL(){
 
 
 
-#endif /* ARVORE_AVL_USARARVOREAVL_H_ */
+#endif /* ARVORE_AVL_USARARVOREAVL_C_ */

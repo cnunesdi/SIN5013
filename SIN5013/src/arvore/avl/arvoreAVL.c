@@ -25,8 +25,8 @@ typedef struct aux {
        seu endereco */
 PONT criarNovoNo(TIPOCHAVE01 ch){
 	PONT novoNo = (PONT)malloc(sizeof(NO));
-	novoNo->esq = NUL;
-	novoNo->dir = NUL;
+	novoNo->esq = NULL;
+	novoNo->dir = NULL;
 	novoNo->chave = ch;
 	novoNo->bal = 0;
 	return novoNo;
@@ -48,7 +48,7 @@ int altura(PONT p){
 
 /* Exibe arvore Em Ordem         */
 void exibirArvoreEmOrdemAVL(PONT raiz){
-	if (raiz == NUL) return;
+	if (raiz == NULL) return;
 	exibirArvoreEmOrdemAVL(raiz->esq);
 	printf("%i ",raiz->chave);
 	exibirArvoreEmOrdemAVL(raiz->dir);
@@ -56,7 +56,7 @@ void exibirArvoreEmOrdemAVL(PONT raiz){
 
 /* Exibe arvore Pre Ordem         */
 void exibirArvorePreOrdemAVL(PONT raiz){
-	if (raiz == NUL) return;
+	if (raiz == NULL) return;
 	printf("%i ",raiz->chave);
 	exibirArvorePreOrdemAVL(raiz->esq);
 	exibirArvorePreOrdemAVL(raiz->dir);
@@ -64,7 +64,7 @@ void exibirArvorePreOrdemAVL(PONT raiz){
 
 /* Exibe arvore Pos Ordem         */
 void exibirArvorePosOrdem(PONT raiz){
-	if (raiz == NUL) return;
+	if (raiz == NULL) return;
 	exibirArvorePreOrdemAVL(raiz->esq);
 	exibirArvorePreOrdemAVL(raiz->dir);
 	printf("%i ",raiz->chave);
@@ -72,7 +72,7 @@ void exibirArvorePosOrdem(PONT raiz){
 
 /* Exibe arvore Em Ordem (com parenteses para os filhos)    */
 void exibirArvore(PONT raiz){
-	if (raiz == NUL) return;
+	if (raiz == NULL) return;
 	printf("%i[%i]",raiz->chave,raiz->bal);
 	printf("(");
 	exibirArvore(raiz->esq);
@@ -82,7 +82,7 @@ void exibirArvore(PONT raiz){
 
 /* Exibe arvore Pre-Ordem indicando pai de cada no    */
 void exibirArvore2(PONT raiz, TIPOCHAVE01 chavePai){
-	if (raiz == NUL) return;
+	if (raiz == NULL) return;
 	printf("(%i,%i) ",chavePai,raiz->chave);
 	exibirArvore2(raiz->esq,raiz->chave);
 	exibirArvore2(raiz->dir,raiz->chave);
@@ -243,7 +243,7 @@ void inserirAVL(PONT* pp, TIPOCHAVE01 ch, bool* alterou){
 /* retorna o endereco do NO que contem chave=ch ou NULL caso a chave nao seja
        encontrada. Utiliza busca binaria recursiva                                */
 PONT buscaBinaria(TIPOCHAVE01 ch, PONT raiz){
-	if (raiz == NUL) return NUL;
+	if (raiz == NULL) return NULL;
 	if (raiz->chave == ch) return raiz;
 	if (raiz->chave<ch)
 		return buscaBinaria(ch,raiz->dir);
@@ -254,7 +254,7 @@ PONT buscaBinaria(TIPOCHAVE01 ch, PONT raiz){
 // Busca binária não recursiva devolvendo o nó pai
 PONT buscaNo(PONT raiz, TIPOCHAVE01 ch, PONT *pai){
 	PONT atual = raiz;
-	*pai = NUL;
+	*pai = NULL;
 	while (atual) {
 		if(atual->chave == ch)
 			return(atual);
@@ -262,7 +262,7 @@ PONT buscaNo(PONT raiz, TIPOCHAVE01 ch, PONT *pai){
 		if(ch < atual->chave) atual = atual->esq;
 		else atual = atual->dir;
 	}
-	return(NUL);
+	return(NULL);
 }
 
 /* Auxilir da funcao excluirChave, procura a maior chave menor que a chave que
@@ -459,13 +459,13 @@ void destruirAux(PONT subRaiz){
 /* libera toda memoria de uma arvore e coloca NULL no valor da raiz    */
 void destruirArvore(PONT * raiz){
 	destruirAux(*raiz);
-	*raiz = NUL;
+	*raiz = NULL;
 }
 
 
 /* inicializa arvore: raiz=NULL */
 void inicializar(PONT * raiz){
-	*raiz = NUL;
+	*raiz = NULL;
 }
 
 

@@ -16,7 +16,7 @@
 
 //int somaRecusiva(int *a,int n);
 
-int main(void) {
+//int main(void) {
 //	mainListaLigadaE();
 
 //	 int n = 3;
@@ -27,9 +27,9 @@ int main(void) {
 //	 return resultado;
 			 //EXIT_SUCCESS;
 
-	 int a[20] = {56,23,89,4,78,45,12,2,6,5,48,20,15,36,60,80,90,150,1,6};
-	 mergesort2(a,1,20);
-
-	 return 0;
-
-}
+//	 int a[20] = {56,23,89,4,78,45,12,2,6,5,48,20,15,36,60,80,90,150,1,6};
+//	 mergesort2(a,1,20);
+//
+//	 return 0;
+//
+//}
